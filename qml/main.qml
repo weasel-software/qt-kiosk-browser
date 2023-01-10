@@ -43,6 +43,14 @@ Window {
                             webView.url = settings["URL"];
                         }
 
+                        if (typeof settings["Rotation"] != "undefined") {
+                            webView.rotation = settings["Rotation"];
+                            if (webView.rotation == 90 || webView.rotation == 270) {
+                                webView.width = Screen.height;
+                                webView.height = Screen.width;
+                            }
+                        }
+
                         for (var key in settings["WebEngineSettings"]) {
                             if (typeof webView.settings[key] == "undefined") {
                                 console.error("Invalid settings property: " + key);
@@ -74,7 +82,7 @@ Window {
 
         url: "http://www.ossystems.com.br"
 
-        anchors.fill: parent
+        anchors.centerIn: parent
         visible: false
 
         property bool disableContextMenu: false

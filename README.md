@@ -30,6 +30,12 @@ After entering in screen saving mode, restart browser after X milliseconds (0 to
 
 Defaults to 3 minutes
 
+#### Rotation
+
+Rotate the view by given number of degrees. 
+
+Any number is allowed, but recommended settings are 0, 90, 180 and 270.
+
 #### WebEngineSettings
 
 Configure browser properties and generic attributes, such as JavaScript support, focus behavior, and access to remote content.
